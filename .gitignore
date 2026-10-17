@@ -6,3 +6,7 @@ bench/results/
 .claude/handoff.md
 .claude/specs/
 .claude/settings.local.json
+.claude/research-dossier.md
+.claude/build-workflow.js
+.claude/ledger/
+*ledger*.json

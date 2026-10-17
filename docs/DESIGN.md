@@ -845,7 +845,7 @@ Measurement runs in four layers, from cheapest to most expensive. A component is
 - Cadence: the cheap pair (A vs D on tasks 3, 4 and 7) runs on every change. The full matrix runs monthly or after any Claude Code upgrade.
 
 **Layer 3: field ledger on the user's real work (0 tokens; terminal `scripts/hetz_ledger.py`)**
-- Snapshot now: `--since 30d --json > docs/ledger-baseline.json`.
+- Snapshot now: `--since 30d --json > .claude/ledger/baseline.json` (git-ignored: never commit personal usage).
 - Re-run after 14 days with `--compare`. Normalize per active day, per session and per request.
 - Track:
   - Cost share above 300k context. Target: about 0, from the 200k cap.

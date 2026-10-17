@@ -7,3 +7,4 @@
 - Run `scripts/check.sh` before committing (`HETZ_NO_CLI=1` skips the `claude` CLI checks). Tests: no conftest.py; each test file is self-contained.
 - Never `@import` anything from `docs/` — docs are for humans, zero runtime cost.
 - Dev loop: `claude --plugin-dir plugins/hetz --plugin-dir plugins/hetz-crew`, `/reload-plugins` after edits.
+- Usage snapshots (`hetz_ledger.py --json`) go to git-ignored `.claude/ledger/`, never `docs/`: never commit personal usage.
