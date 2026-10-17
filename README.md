@@ -33,6 +33,48 @@ It is one marketplace (`hetz`) with two plugins:
 
 Then, in any Claude Code session, run `/hetz:setup global` once per machine. Optionally, run `/hetz:setup repo` or `/hetz:slim` once per repo; repo rules go to `.claude/settings.local.json` unless you pick the team file. The marketplace is a directory source, so edits to this repo apply after `/reload-plugins`.
 
+## Usage
+
+Settings take effect in **new** sessions only.
+
+### First time in a repo
+
+1. Open a new session. The status bar should read `sonnet │ ctx …/200k │ cache …% warm │ $…`.
+2. Run `/hetz:slim` once. It audits CLAUDE.md and the other always-loaded text, and proposes deny rules for generated or bulky files.
+
+### Day to day
+
+| Situation | Do |
+|---|---|
+| Small, clear task | Just ask. Don't delegate: a subagent cold start costs 25–46k tokens. |
+| Fuzzy or bigger task | `/hetz:interview <idea>` → it writes `.claude/specs/<slug>.md` → `/clear` → `/hetz-crew:delegate .claude/specs/<slug>.md` (or `implement <path>` for small specs). |
+| Clear multi-step task | `/hetz-crew:delegate <task in plain words, plus how to check it>`. It shows a plan table and waits for your approval. |
+| Switching to an unrelated task | `/hetz:handoff` → `/clear`. The next session picks up the note automatically. |
+| Hard problem | Start a new session on a stronger model (`cc-deep`). Pick the model when you start; never `/model` mid-session, because that rebuilds the cache. |
+| One command needs its full output | Append `# hz:raw` to that command. |
+
+### Writing a spec for delegate
+
+`/hetz:interview` writes one for you. To write one by hand, cover four things:
+
+- **Goal:** one line.
+- **Scope:** files to touch, and what not to touch.
+- **Behavior:** signatures, inputs and outputs, edge cases.
+- **Acceptance:** the command that proves it works.
+
+### Reading the status bar
+
+| Segment | Meaning | Act when |
+|---|---|---|
+| `ctx 142k/200k` | Context re-sent on every request | Yellow or red: `/hetz:handoff` → `/clear` |
+| `cache 93% warm` | Share of context served from cache, at ~10% of the input price | 85–99% is normal. It is low on the first turn by design. |
+| `cache COLD` | Cache expired (idle or model switch); the next turn re-pays the whole context | With a large context, hand off and clear instead of continuing |
+| `$3.12` | Session cost so far | — |
+
+### Every ~2 weeks
+
+Run `python3 scripts/hetz_ledger.py --since 14d` and `--replay-squeeze --since 14d` from this repo to check that the kit pays off.
+
 ## Uninstall
 
 `/hetz:setup undo global` (or `undo repo`), then remove the plugins. `scripts/uninstall.sh` does all of it without Claude: it undoes every change in `~/.claude/hetz/manifest.json`, uninstalls both plugins and removes the marketplace. Flags: `--dry-run`, `--keep-settings`, `--purge`.
