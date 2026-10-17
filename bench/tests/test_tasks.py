@@ -151,7 +151,8 @@ def test_setup_is_deterministic_and_refuses_non_empty_dirs(tmp_path):
 
 def test_noisy_suite_is_noisy(tmp_path):
     f = setup("noisy-suite", tmp_path / "ns")
-    p = subprocess.run(["make", "test"], cwd=f, capture_output=True, text=True, timeout=120)
+    loud = {k: v for k, v in os.environ.items() if k not in ("NO_COLOR", "CI", "PYTEST_ADDOPTS")}  # hetz quiet env sets these
+    p = subprocess.run(["make", "test"], cwd=f, capture_output=True, text=True, timeout=120, env=loud)
     out = p.stdout + p.stderr
     assert p.returncode != 0
     assert len(out) > 30000  # above the default 30k Bash cap and the profile's 12k
