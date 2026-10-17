@@ -1,0 +1,6 @@
+{
+  "extends": "B",
+  "description": "B + hetz hooks plugin (squeeze, session-guard, return contract, quiet env). Switches forced on explicitly.",
+  "plugin_dirs": ["plugins/hetz"],
+  "env": {"HETZ_SQUEEZE": "1", "HETZ_GUARD": "1", "HETZ_CONTRACT": "1"}
+}

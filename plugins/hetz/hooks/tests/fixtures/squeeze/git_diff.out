@@ -1,0 +1,92 @@
+diff --git a/src/server.py b/src/server.py
+index 3f2a1b9..8c7d6e5 100644
+--- a/src/server.py
++++ b/src/server.py
+@@ -10,7 +10,9 @@ def handler_0(request):
+     value_0_0 = request.args.get('k0')
+     value_0_1 = request.args.get('k1')
+     value_0_2 = request.args.get('k2')
+-    return process_0(value_0_0)
++    if value_0_0 is None:
++        raise ValueError('missing k0 in handler_0')
++    return process_0(value_0_0, strict=True)
+     # unchanged context line 0 for hunk 0, long enough to look like real code
+     # unchanged context line 1 for hunk 0, long enough to look like real code
+     # unchanged context line 2 for hunk 0, long enough to look like real code
+@@ -50,7 +50,9 @@ def handler_1(request):
+     value_1_0 = request.args.get('k0')
+     value_1_1 = request.args.get('k1')
+     value_1_2 = request.args.get('k2')
+-    return process_1(value_1_0)
++    if value_1_0 is None:
++        raise ValueError('missing k0 in handler_1')
++    return process_1(value_1_0, strict=True)
+     # unchanged context line 0 for hunk 1, long enough to look like real code
+     # unchanged context line 1 for hunk 1, long enough to look like real code
+     # unchanged context line 2 for hunk 1, long enough to look like real code
+@@ -90,7 +90,9 @@ def handler_2(request):
+     value_2_0 = request.args.get('k0')
+     value_2_1 = request.args.get('k1')
+     value_2_2 = request.args.get('k2')
+-    return process_2(value_2_0)
++    if value_2_0 is None:
++        raise ValueError('missing k0 in handler_2')
++    return process_2(value_2_0, strict=True)
+     # unchanged context line 0 for hunk 2, long enough to look like real code
+     # unchanged context line 1 for hunk 2, long enough to look like real code
+     # unchanged context line 2 for hunk 2, long enough to look like real code
+@@ -130,7 +130,9 @@ def handler_3(request):
+     value_3_0 = request.args.get('k0')
+     value_3_1 = request.args.get('k1')
+     value_3_2 = request.args.get('k2')
+-    return process_3(value_3_0)
++    if value_3_0 is None:
++        raise ValueError('missing k0 in handler_3')
++    return process_3(value_3_0, strict=True)
+     # unchanged context line 0 for hunk 3, long enough to look like real code
+     # unchanged context line 1 for hunk 3, long enough to look like real code
+     # unchanged context line 2 for hunk 3, long enough to look like real code
+@@ -170,7 +170,9 @@ def handler_4(request):
+     value_4_0 = request.args.get('k0')
+     value_4_1 = request.args.get('k1')
+     value_4_2 = request.args.get('k2')
+-    return process_4(value_4_0)
++    if value_4_0 is None:
++        raise ValueError('missing k0 in handler_4')
++    return process_4(value_4_0, strict=True)
+     # unchanged context line 0 for hunk 4, long enough to look like real code
+     # unchanged context line 1 for hunk 4, long enough to look like real code
+     # unchanged context line 2 for hunk 4, long enough to look like real code
+@@ -210,7 +210,9 @@ def handler_5(request):
+     value_5_0 = request.args.get('k0')
+     value_5_1 = request.args.get('k1')
+     value_5_2 = request.args.get('k2')
+-    return process_5(value_5_0)
++    if value_5_0 is None:
++        raise ValueError('missing k0 in handler_5')
++    return process_5(value_5_0, strict=True)
+     # unchanged context line 0 for hunk 5, long enough to look like real code
+     # unchanged context line 1 for hunk 5, long enough to look like real code
+     # unchanged context line 2 for hunk 5, long enough to look like real code
+@@ -250,7 +250,9 @@ def handler_6(request):
+     value_6_0 = request.args.get('k0')
+     value_6_1 = request.args.get('k1')
+     value_6_2 = request.args.get('k2')
+-    return process_6(value_6_0)
++    if value_6_0 is None:
++        raise ValueError('missing k0 in handler_6')
++    return process_6(value_6_0, strict=True)
+     # unchanged context line 0 for hunk 6, long enough to look like real code
+     # unchanged context line 1 for hunk 6, long enough to look like real code
+     # unchanged context line 2 for hunk 6, long enough to look like real code
+@@ -290,7 +290,9 @@ def handler_7(request):
+     value_7_0 = request.args.get('k0')
+     value_7_1 = request.args.get('k1')
+     value_7_2 = request.args.get('k2')
+-    return process_7(value_7_0)
++    if value_7_0 is None:
++        raise ValueError('missing k0 in handler_7')
++    return process_7(value_7_0, strict=True)
+     # unchanged context line 0 for hunk 7, long enough to look like real code
+     # unchanged context line 1 for hunk 7, long enough to look like real code
+     # unchanged context line 2 for hunk 7, long enough to look like real code

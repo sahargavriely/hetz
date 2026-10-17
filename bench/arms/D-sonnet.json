@@ -1,0 +1,6 @@
+{
+  "extends": "D",
+  "description": "D with a Sonnet main model (alias; the exact id lands in results via modelUsage).",
+  "model": "sonnet",
+  "variant_of": "D"
+}

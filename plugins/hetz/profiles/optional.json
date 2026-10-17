@@ -1,0 +1,48 @@
+{
+  "_doc": "hetz optional items for /hetz:setup global; unchecked unless \"default\": true. Same merge rules as safe.json. \"requires\"/\"hide_if\" name conditions computed by scripts/hetz_settings.py.",
+  "items": {
+    "explore": {
+      "label": "Explore subagent on Haiku",
+      "why": "Writes ~/.claude/agents/Explore.md; a user agent named Explore overrides the built-in (verified 2.1.272). Delete the file to restore it.",
+      "files": ["explore"],
+      "default": true,
+      "selftest": "/agents lists Explore (user) on haiku"
+    },
+    "statusline-wrap": {
+      "label": "hetz segment after your statusline",
+      "why": "Keeps your statusLine command and appends the hetz meter; undo restores yours.",
+      "settings": {"statusLine": {"type": "command", "command": "{statusline_wrap_command}"}},
+      "replaces": ["statusLine"],
+      "files": ["statusline", "statusline-wrap"],
+      "requires": "wrap_mode",
+      "default": true,
+      "selftest": "the status bar shows your line followed by `│ ctx …`"
+    },
+    "model-sonnet": {
+      "label": "Default model Sonnet",
+      "why": "About 2x cheaper per token than Opus; Opus stays one launcher (cc-deep) away.",
+      "settings": {"model": "sonnet"}
+    },
+    "launchers": {
+      "label": "Shell launchers cc/cc-deep/cc-quick/cc-spec/cc-do",
+      "why": "Pick model and effort at session start instead of mid-session /model (which re-writes the cache).",
+      "files": ["launchers"]
+    },
+    "read-cap": {
+      "label": "File Read cap 12k tokens",
+      "why": "CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS=12000: big files must be read in ranges.",
+      "settings": {"env": {"CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS": "12000"}}
+    },
+    "goal-checkin": {
+      "label": "No goal check-in turns",
+      "why": "CLAUDE_CODE_GOAL_CHECKIN_MINUTES=0 stops periodic goal check-in requests.",
+      "settings": {"env": {"CLAUDE_CODE_GOAL_CHECKIN_MINUTES": "0"}}
+    },
+    "advisor": {
+      "label": "Opus advisor",
+      "why": "advisorModel opus: a cheaper main model consults Opus at decision points (Anthropic API only).",
+      "settings": {"advisorModel": "opus"},
+      "requires": "api_auth"
+    }
+  }
+}

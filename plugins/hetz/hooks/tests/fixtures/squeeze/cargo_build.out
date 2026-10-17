@@ -1,0 +1,167 @@
+    Updating crates.io index
+     Locking 214 packages to latest compatible versions
+      Adding axum v0.7.7 (latest: v0.8.1)
+ Downloading crates ...
+  Downloaded proc-macro2 v1.12.50
+  Downloaded unicode-ident v0.15.81
+  Downloaded quote v1.1.24
+  Downloaded syn v0.6.56
+  Downloaded serde v0.3.43
+  Downloaded serde_derive v2.1.13
+  Downloaded serde_json v0.18.19
+  Downloaded itoa v2.3.46
+  Downloaded ryu v2.0.9
+  Downloaded memchr v0.19.48
+  Downloaded libc v0.20.32
+  Downloaded cfg-if v1.19.46
+  Downloaded once_cell v1.3.14
+  Downloaded autocfg v1.14.61
+  Downloaded bitflags v1.9.10
+  Downloaded log v0.3.95
+  Downloaded smallvec v1.23.33
+  Downloaded scopeguard v1.26.88
+  Downloaded lock_api v0.16.2
+  Downloaded parking_lot_core v0.30.67
+  Downloaded parking_lot v1.4.88
+  Downloaded pin-project-lite v2.29.3
+  Downloaded bytes v2.9.82
+  Downloaded futures-core v0.22.33
+  Downloaded futures-sink v2.11.21
+  Downloaded futures-channel v1.24.28
+  Downloaded futures-task v2.17.99
+  Downloaded futures-util v2.10.81
+  Downloaded slab v0.19.97
+  Downloaded mio v0.25.30
+  Downloaded socket2 v1.23.29
+  Downloaded tokio-macros v0.16.63
+  Downloaded tokio v1.23.3
+  Downloaded tracing-core v0.25.35
+  Downloaded tracing-attributes v1.8.24
+  Downloaded tracing v2.19.44
+  Downloaded http v1.25.92
+  Downloaded httparse v1.30.46
+  Downloaded h2 v0.7.13
+  Downloaded hyper v0.15.25
+  Downloaded tower-service v1.6.61
+  Downloaded tower-layer v2.28.78
+  Downloaded tower v0.15.83
+  Downloaded axum-core v1.25.82
+  Downloaded axum v0.26.84
+  Downloaded regex-syntax v0.29.49
+  Downloaded aho-corasick v2.24.25
+  Downloaded regex-automata v1.28.22
+  Downloaded regex v1.25.81
+  Downloaded anyhow v1.2.92
+  Downloaded thiserror-impl v1.14.51
+  Downloaded thiserror v2.30.10
+  Downloaded clap_lex v2.5.21
+  Downloaded strsim v0.0.19
+  Downloaded anstyle v2.28.59
+  Downloaded clap_builder v2.4.78
+  Downloaded clap_derive v2.15.84
+  Downloaded clap v1.4.70
+  Downloaded getrandom v2.4.2
+  Downloaded rand_core v0.25.92
+  Downloaded ppv-lite86 v2.3.67
+  Downloaded rand_chacha v2.29.17
+  Downloaded rand v1.27.24
+  Downloaded base64 v0.0.32
+  Downloaded percent-encoding v0.9.64
+  Downloaded form_urlencoded v0.24.75
+  Downloaded idna v1.8.69
+  Downloaded url v1.26.16
+  Downloaded sha2 v0.29.94
+  Downloaded digest v1.28.58
+  Downloaded generic-array v2.18.66
+  Downloaded typenum v1.26.64
+   Compiling proc-macro2 v0.17.19
+   Compiling unicode-ident v2.16.2
+   Compiling quote v1.24.23
+   Compiling syn v2.0.99
+   Compiling serde v0.5.18
+   Compiling serde_derive v1.19.92
+   Compiling serde_json v0.17.7
+   Compiling itoa v1.21.66
+   Compiling ryu v2.17.61
+   Compiling memchr v0.28.71
+   Compiling libc v0.7.24
+   Compiling cfg-if v1.1.98
+   Compiling once_cell v0.16.57
+   Compiling autocfg v2.0.97
+   Compiling bitflags v0.14.41
+   Compiling log v2.16.77
+   Compiling smallvec v2.6.88
+   Compiling scopeguard v1.14.65
+   Compiling lock_api v2.25.61
+   Compiling parking_lot_core v2.30.31
+   Compiling parking_lot v2.16.33
+   Compiling pin-project-lite v2.28.25
+   Compiling bytes v1.4.53
+   Compiling futures-core v0.12.56
+   Compiling futures-sink v1.2.85
+   Compiling futures-channel v0.13.9
+   Compiling futures-task v0.21.38
+   Compiling futures-util v0.28.99
+   Compiling slab v0.30.91
+   Compiling mio v2.21.46
+   Compiling socket2 v0.8.17
+   Compiling tokio-macros v1.7.95
+   Compiling tokio v0.12.62
+   Compiling tracing-core v0.21.28
+   Compiling tracing-attributes v0.22.55
+   Compiling tracing v2.12.43
+   Compiling http v1.6.45
+   Compiling httparse v1.2.92
+   Compiling h2 v1.0.43
+   Compiling hyper v2.14.56
+   Compiling tower-service v2.0.49
+   Compiling tower-layer v1.16.79
+   Compiling tower v1.16.8
+   Compiling axum-core v0.29.29
+   Compiling axum v0.2.33
+   Compiling regex-syntax v1.1.99
+   Compiling aho-corasick v0.8.96
+   Compiling regex-automata v0.26.54
+   Compiling regex v2.26.33
+   Compiling anyhow v1.4.68
+   Compiling thiserror-impl v2.18.63
+   Compiling thiserror v2.10.11
+   Compiling clap_lex v1.1.88
+   Compiling strsim v0.13.9
+   Compiling anstyle v1.30.2
+   Compiling clap_builder v2.2.33
+   Compiling clap_derive v0.19.28
+   Compiling clap v0.8.15
+   Compiling getrandom v1.0.43
+   Compiling rand_core v2.13.34
+   Compiling ppv-lite86 v2.4.5
+   Compiling rand_chacha v2.22.30
+   Compiling rand v0.5.33
+   Compiling base64 v0.5.25
+   Compiling percent-encoding v1.20.39
+   Compiling form_urlencoded v2.24.26
+   Compiling idna v1.14.64
+   Compiling url v2.5.34
+   Compiling sha2 v1.25.2
+   Compiling digest v1.1.1
+   Compiling generic-array v0.23.64
+   Compiling typenum v2.6.65
+   Compiling myapp v0.3.1 (/Users/dev/myapp)
+warning: unused variable: `retries`
+  --> src/client.rs:42:13
+   |
+42 |         let retries = cfg.retries;
+   |             ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_retries`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: function `legacy_handler` is never used
+  --> src/routes.rs:118:4
+    |
+118 | fn legacy_handler() -> &'static str {
+    |    ^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: `myapp` (bin "myapp") generated 2 warnings (run `cargo fix --bin "myapp"` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 12s

@@ -1,0 +1,6 @@
+{
+  "description": "Control: Claude Code defaults plus the built-in Concise output style (the control is 'be concise', not nothing).",
+  "settings": {"outputStyle": "Concise"},
+  "plugin_dirs": [],
+  "env": {}
+}

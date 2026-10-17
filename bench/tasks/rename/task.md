@@ -1,0 +1,1 @@
+Rename the function `calc_total` to `compute_order_total` everywhere in this repo: definition, imports, call sites, tests, comments and docs. Do not leave an alias behind, and do not touch other names that merely contain that text. Keep `python3 -m unittest` passing.

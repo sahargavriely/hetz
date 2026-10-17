@@ -1,0 +1,7 @@
+{
+  "name": "hetz-crew",
+  "description": "Model-matched delegation: Haiku runner, Sonnet worker, Opus judge, and /delegate",
+  "author": {
+    "name": "Sahar Gavriely"
+  }
+}

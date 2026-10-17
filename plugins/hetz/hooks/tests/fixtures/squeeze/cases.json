@@ -1,0 +1,31 @@
+{
+  "npm_install": {
+    "command": "npm install",
+    "expect": "squeeze",
+    "min_saving": 0.5
+  },
+  "pytest_pass": {
+    "command": "python -m pytest -v",
+    "expect": "squeeze",
+    "min_saving": 0.7
+  },
+  "cargo_build": {
+    "command": "cargo build",
+    "expect": "squeeze",
+    "min_saving": 0.6
+  },
+  "docker_build": {
+    "command": "docker build --progress=plain -t myapp .",
+    "expect": "squeeze",
+    "min_saving": 0.6
+  },
+  "jest_fail": {
+    "command": "npx jest --verbose",
+    "expect": "squeeze",
+    "min_saving": 0.6
+  },
+  "git_diff": {
+    "command": "git diff",
+    "expect": "pass"
+  }
+}

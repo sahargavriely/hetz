@@ -1,0 +1,6 @@
+{
+  "extends": "D",
+  "description": "Ablation: D without the hetz-crew plugin (Explore override kept).",
+  "ablates": "crew",
+  "plugin_dirs": ["plugins/hetz"]
+}

@@ -1,0 +1,50 @@
+{
+  "_doc": "hetz core profile, pre-checked in /hetz:setup global and applied to ~/.claude/settings.json by scripts/hetz_settings.py. Merge: dicts merge, arrays union, existing differing values (env included) are kept unless forced. {placeholders} are filled at apply time. Verified against Claude Code 2.1.272.",
+  "items": {
+    "cap": {
+      "label": "Compact at 200k",
+      "why": "1M-window models otherwise compact at ~967k; 63% of the measured bill came from requests over 600k context.",
+      "settings": {"autoCompactWindow": 200000},
+      "selftest": "/autocompact or /context shows a 200k window \"(from settings)\""
+    },
+    "output-caps": {
+      "label": "Bash/MCP output cap 12k",
+      "why": "bashOutputMaxChars 12000 (default 30000; overflow -> file + preview), MAX_MCP_OUTPUT_TOKENS 12000 (default 25000).",
+      "settings": {"bashOutputMaxChars": 12000, "env": {"MAX_MCP_OUTPUT_TOKENS": "12000"}}
+    },
+    "env": {
+      "label": "Env knobs",
+      "why": "General-purpose subagents on Sonnet, no prompt-suggestion request per turn, idle /clear nudge tuned to the cache TTL.",
+      "settings": {
+        "env": {
+          "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+          "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION": "false",
+          "CLAUDE_CODE_IDLE_THRESHOLD_MINUTES": "{idle_minutes}",
+          "CLAUDE_CODE_IDLE_TOKEN_THRESHOLD": "50000"
+        }
+      }
+    },
+    "glob-deny": {
+      "label": "Glob respects .gitignore + min/map deny",
+      "why": "Glob ignores .gitignore by default; //-anchored deny blocks minified bundles and source maps in every project (no lockfiles: Read deny also blocks Edit).",
+      "settings": {
+        "env": {"CLAUDE_CODE_GLOB_NO_IGNORE": "false"},
+        "permissions": {"deny": ["Read(//**/*.min.js)", "Read(//**/*.min.css)", "Read(//**/*.js.map)", "Read(//**/*.css.map)"]}
+      },
+      "selftest": "ask Claude to Read any *.min.js file -> expect a permission denial"
+    },
+    "concise": {
+      "label": "Concise output style",
+      "why": "Built-in first-party style: result first, no preamble or recap. Kept off if you already chose a style.",
+      "settings": {"outputStyle": "Concise"}
+    },
+    "statusline": {
+      "label": "hetz statusline",
+      "why": "Zero-token meter: model, ctx tokens vs compact window, cache warm/cold, $.",
+      "settings": {"statusLine": {"type": "command", "command": "{statusline_command}"}},
+      "files": ["statusline"],
+      "hide_if": "wrap_mode",
+      "selftest": "the status bar shows `model │ ctx …/200k │ cache … │ $…`"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "extends": "C",
+  "description": "C + hetz-crew plugin + Explore-on-Haiku override (copied to the fixture as a project agent, which outranks the built-in).",
+  "plugin_dirs": ["plugins/hetz", "plugins/hetz-crew"],
+  "project_files": {".claude/agents/Explore.md": "plugins/hetz/templates/Explore.md"}
+}

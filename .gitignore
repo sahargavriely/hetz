@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+bench/results/
+*.hetz-bak
+.claude/handoff.md
+.claude/specs/
+.claude/settings.local.json

@@ -1,0 +1,236 @@
+ PASS  src/utils/format.test.js (1.022 s)
+  format
+    ✓ renders invalid input (23 ms)
+    ✓ submits label (34 ms)
+    ✓ updates async data (15 ms)
+    ✓ returns invalid input (20 ms)
+    ✓ caches large numbers (14 ms)
+    ✓ updates invalid input (54 ms)
+    ✓ parses large numbers (9 ms)
+    ✓ renders pagination (16 ms)
+
+ PASS  src/utils/dates.test.js (3.461 s)
+  dates
+    ✓ handles focus trap (10 ms)
+    ✓ submits error message (52 ms)
+    ✓ submits empty state (4 ms)
+    ✓ rejects missing props (39 ms)
+    ✓ caches keyboard navigation (39 ms)
+    ✓ rejects sorting (32 ms)
+    ✓ validates large numbers (58 ms)
+    ✓ renders empty state (4 ms)
+    ✓ rejects empty state (26 ms)
+
+ PASS  src/utils/currency.test.js (3.243 s)
+  currency
+    ✓ renders pagination (7 ms)
+    ✓ renders invalid input (36 ms)
+    ✓ validates large numbers (27 ms)
+    ✓ validates async data (39 ms)
+    ✓ rejects focus trap (42 ms)
+    ✓ returns retry (40 ms)
+    ✓ formats async data (20 ms)
+    ✓ handles locale (41 ms)
+    ✓ renders sorting (51 ms)
+    ✓ parses sorting (35 ms)
+
+ PASS  src/hooks/useAuth.test.jsx (1.384 s)
+  useAuth
+    ✓ parses label (48 ms)
+    ✓ parses large numbers (15 ms)
+    ✓ handles locale (15 ms)
+    ✓ renders label (22 ms)
+    ✓ submits sorting (4 ms)
+    ✓ submits focus trap (36 ms)
+    ✓ returns focus trap (51 ms)
+    ✓ rejects locale (19 ms)
+    ✓ validates label (57 ms)
+    ✓ rejects empty state (11 ms)
+    ✓ submits negative values (54 ms)
+    ✓ validates large numbers (48 ms)
+    ✓ updates negative values (57 ms)
+    ✓ returns missing props (39 ms)
+
+ PASS  src/hooks/useFetch.test.jsx (4.388 s)
+  useFetch
+    ✓ parses keyboard navigation (54 ms)
+    ✓ rejects sorting (1 ms)
+    ✓ renders error message (47 ms)
+    ✓ validates invalid input (57 ms)
+    ✓ submits pagination (14 ms)
+    ✓ returns invalid input (38 ms)
+    ✓ handles invalid input (59 ms)
+    ✓ formats large numbers (3 ms)
+    ✓ renders label (7 ms)
+    ✓ caches large numbers (23 ms)
+    ✓ formats sorting (2 ms)
+    ✓ renders empty state (9 ms)
+    ✓ renders sorting (5 ms)
+    ✓ renders label (55 ms)
+    ✓ caches pagination (24 ms)
+    ✓ validates retry (53 ms)
+
+ PASS  src/components/Button.test.jsx (9.912 s)
+  Button
+    ✓ returns label (16 ms)
+    ✓ validates negative values (8 ms)
+    ✓ renders empty state (55 ms)
+    ✓ handles retry (49 ms)
+    ✓ submits keyboard navigation (7 ms)
+    ✓ formats label (51 ms)
+    ✓ validates locale (21 ms)
+    ✓ updates error message (17 ms)
+    ✓ renders missing props (17 ms)
+
+ PASS  src/components/Modal.test.jsx (5.049 s)
+  Modal
+    ✓ updates pagination (39 ms)
+    ✓ rejects keyboard navigation (55 ms)
+    ✓ submits invalid input (48 ms)
+    ✓ renders pagination (27 ms)
+    ✓ renders error message (34 ms)
+    ✓ handles missing props (31 ms)
+    ✓ renders async data (37 ms)
+    ✓ validates sorting (56 ms)
+    ✓ handles invalid input (53 ms)
+    ✓ submits large numbers (28 ms)
+    ✓ renders async data (13 ms)
+    ✓ submits pagination (49 ms)
+    ✓ renders empty state (23 ms)
+
+ PASS  src/components/Table.test.jsx (8.097 s)
+  Table
+    ✓ formats keyboard navigation (38 ms)
+    ✓ updates retry (33 ms)
+    ✓ submits invalid input (11 ms)
+    ✓ submits retry (14 ms)
+    ✓ validates keyboard navigation (11 ms)
+    ✓ handles focus trap (50 ms)
+    ✓ handles keyboard navigation (51 ms)
+    ✓ rejects pagination (7 ms)
+    ✓ updates missing props (7 ms)
+    ✓ returns error message (58 ms)
+    ✓ handles error message (57 ms)
+    ✓ renders missing props (14 ms)
+    ✓ submits locale (28 ms)
+    ✓ rejects async data (11 ms)
+    ✓ returns focus trap (15 ms)
+
+ PASS  src/components/Form.test.jsx (8.129 s)
+  Form
+    ✓ caches pagination (45 ms)
+    ✓ caches focus trap (3 ms)
+    ✓ updates invalid input (21 ms)
+    ✓ rejects large numbers (56 ms)
+    ✓ parses focus trap (36 ms)
+    ✓ updates large numbers (30 ms)
+    ✓ parses sorting (50 ms)
+    ✓ submits invalid input (15 ms)
+    ✓ formats missing props (30 ms)
+    ✓ validates async data (13 ms)
+    ✓ submits locale (49 ms)
+    ✓ caches large numbers (47 ms)
+    ✓ formats negative values (47 ms)
+    ✓ updates invalid input (34 ms)
+    ✓ updates large numbers (16 ms)
+    ✓ updates negative values (17 ms)
+
+ PASS  src/store/cart.test.js (2.168 s)
+  cart
+    ✓ validates error message (10 ms)
+    ✓ formats pagination (20 ms)
+    ✓ submits error message (18 ms)
+    ✓ validates label (41 ms)
+    ✓ handles locale (14 ms)
+    ✓ returns keyboard navigation (3 ms)
+    ✓ renders error message (55 ms)
+    ✓ returns sorting (15 ms)
+    ✓ rejects focus trap (19 ms)
+
+ PASS  src/store/user.test.js (8.022 s)
+  user
+    ✓ submits invalid input (48 ms)
+    ✓ returns empty state (48 ms)
+    ✓ validates retry (28 ms)
+    ✓ caches invalid input (48 ms)
+    ✓ returns retry (15 ms)
+    ✓ caches retry (15 ms)
+    ✓ formats focus trap (8 ms)
+    ✓ parses error message (21 ms)
+    ✓ submits focus trap (45 ms)
+    ✓ handles error message (16 ms)
+
+ PASS  src/pages/Home.test.jsx (7.730 s)
+  Home
+    ✓ submits retry (28 ms)
+    ✓ parses keyboard navigation (2 ms)
+    ✓ caches retry (27 ms)
+    ✓ rejects focus trap (43 ms)
+    ✓ formats focus trap (21 ms)
+    ✓ renders error message (54 ms)
+    ✓ parses label (3 ms)
+    ✓ submits async data (14 ms)
+    ✓ formats sorting (51 ms)
+    ✓ validates async data (23 ms)
+
+ PASS  src/pages/Checkout.test.jsx (2.867 s)
+  Checkout
+    ✓ rejects negative values (46 ms)
+    ✓ parses async data (2 ms)
+    ✓ updates async data (22 ms)
+    ✓ returns sorting (30 ms)
+    ✓ validates focus trap (12 ms)
+    ✓ returns async data (49 ms)
+    ✓ handles sorting (40 ms)
+    ✓ updates focus trap (4 ms)
+    ✓ submits locale (25 ms)
+    ✓ returns empty state (1 ms)
+    ✓ handles error message (59 ms)
+    ✓ returns focus trap (45 ms)
+    ✓ updates invalid input (17 ms)
+    ✓ handles negative values (20 ms)
+    ✓ returns async data (15 ms)
+
+ PASS  src/api/errors.test.js (7.473 s)
+  errors
+    ✓ formats large numbers (60 ms)
+    ✓ handles pagination (52 ms)
+    ✓ validates keyboard navigation (42 ms)
+    ✓ rejects sorting (15 ms)
+    ✓ formats missing props (43 ms)
+    ✓ returns keyboard navigation (19 ms)
+    ✓ rejects focus trap (9 ms)
+    ✓ parses missing props (51 ms)
+    ✓ validates locale (46 ms)
+    ✓ returns focus trap (17 ms)
+    ✓ returns focus trap (12 ms)
+
+ FAIL  src/api/client.test.js (2.114 s)
+  ApiClient
+    ✓ sends auth header (12 ms)
+    ✓ parses json body (4 ms)
+    ✕ retries on 503 (31 ms)
+    ✓ times out after 10s (8 ms)
+
+  ● ApiClient › retries on 503
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 1
+
+      42 |     await client.get('/health');
+      43 |     expect(fetchMock).toHaveBeenCalled();
+    > 44 |     expect(retries).toBe(3);
+         |                     ^
+      45 |   });
+      46 |
+      47 |   it('times out after 10s', async () => {
+
+      at Object.toBe (src/api/client.test.js:44:21)
+
+Test Suites: 1 failed, 14 passed, 15 total
+Tests:       1 failed, 168 passed, 169 total
+Snapshots:   12 passed, 12 total
+Time:        9.481 s
+Ran all test suites.

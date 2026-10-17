@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Ablation: D with the CLAUDE_ENV_FILE quiet-tool env off.",
+  "ablates": "quietenv",
+  "target_tasks": ["noisy-suite", "failing-test"],
+  "env": {"HETZ_QUIET_ENV": "off"}
+}

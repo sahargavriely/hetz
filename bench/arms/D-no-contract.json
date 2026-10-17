@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Ablation: D with the SubagentStart return contract off.",
+  "ablates": "contract",
+  "target_tasks": ["repo-qa", "rename", "three-tasks"],
+  "env": {"HETZ_CONTRACT": "0"}
+}

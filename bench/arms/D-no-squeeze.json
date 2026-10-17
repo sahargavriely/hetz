@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Ablation: D with squeeze off.",
+  "ablates": "squeeze",
+  "target_tasks": ["failing-test", "noisy-suite", "rename"],
+  "env": {"HETZ_SQUEEZE": "0"}
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "A",
+  "description": "A + hetz settings profile: every item of plugins/hetz/profiles/safe.json except the statusline (never runs under -p).",
+  "settings_profile": {
+    "path": "plugins/hetz/profiles/safe.json",
+    "exclude": ["statusline"],
+    "fill": {"idle_minutes": "60"}
+  }
+}

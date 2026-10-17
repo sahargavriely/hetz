@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Rotation: D, but each turn of a multi-turn task starts a fresh session (as if /clear between subtasks).",
+  "rotate": "clear",
+  "only_tasks": ["three-tasks"],
+  "variant_of": "D"
+}

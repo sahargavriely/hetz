@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Rotation: D, running /hetz:handoff at the end of each turn, then a fresh session for the next (guard picks the note up).",
+  "rotate": "handoff",
+  "only_tasks": ["three-tasks"],
+  "variant_of": "D"
+}

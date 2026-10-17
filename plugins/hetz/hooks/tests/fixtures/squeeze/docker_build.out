@@ -1,0 +1,154 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 612B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.4s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 134B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:f7e3dfc967a64cb14028d512c9791e558e08baa7196b50ac2f86702824c1c099
+#4 resolve docker.io/library/python:3.12-slim@sha256:724caf4941d4072014b3ce107f80e222f828767efc2f91624a8940f1f836f99e 0.0s done
+#4 sha256:ee3692f09e2e8c662248b483b7ffc050fec94dbca3a0aac36098b2cc2bd81831 27.94MB / 39.00MB 1.4s done
+#4 extracting sha256:ee3692f09e2e8c662248b483b7ffc050fec94dbca3a0aac36098b2cc2bd81831 0.5s done
+#4 sha256:da6bd0c621de49f145fda9988c79fc35526f7eaed46725a2a7b860dcd6c8a1f8 19.56MB / 34.00MB 1.2s done
+#4 extracting sha256:da6bd0c621de49f145fda9988c79fc35526f7eaed46725a2a7b860dcd6c8a1f8 0.5s done
+#4 sha256:7cced9041dff02cee737443e210471948d33296c87009e8a7f770d9106fd287d 30.57MB / 37.00MB 3.1s done
+#4 extracting sha256:7cced9041dff02cee737443e210471948d33296c87009e8a7f770d9106fd287d 0.6s done
+#4 sha256:dbc60926f6967e7893f57fd14c1604d115cea325a65e19cbae530282bd36cb9d 3.16MB / 52.00MB 3.4s done
+#4 extracting sha256:dbc60926f6967e7893f57fd14c1604d115cea325a65e19cbae530282bd36cb9d 0.6s done
+#4 sha256:e6abf0d7c1c1e21862ab8a18a8902073fec8df4f50947aaeb26c57d21fa5d328 20.20MB / 36.00MB 0.7s done
+#4 extracting sha256:e6abf0d7c1c1e21862ab8a18a8902073fec8df4f50947aaeb26c57d21fa5d328 0.8s done
+#4 sha256:e574de739988b886e7577496a2c8773e130f7eb19731662b5e803b61ba416816 27.11MB / 56.00MB 2.7s done
+#4 extracting sha256:e574de739988b886e7577496a2c8773e130f7eb19731662b5e803b61ba416816 0.6s done
+#4 DONE 4.8s
+
+#5 [internal] load build context
+#5 transferring context: 48.31kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /app
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.156 Collecting fastapi==0.115.0 (from -r requirements.txt (line 1))
+#8 1.218   Downloading fastapi-0.115.0-py3-none-any.whl.metadata (15 kB)
+#8 1.227 Collecting uvicorn==0.31.0 (from -r requirements.txt (line 2))
+#8 1.327   Downloading uvicorn-0.31.0-py3-none-any.whl.metadata (32 kB)
+#8 1.346 Collecting pydantic==2.9.2 (from -r requirements.txt (line 3))
+#8 1.366   Downloading pydantic-2.9.2-py3-none-any.whl.metadata (27 kB)
+#8 1.565 Collecting pydantic-core==2.23.4 (from -r requirements.txt (line 4))
+#8 1.596   Downloading pydantic_core-2.23.4-py3-none-any.whl.metadata (36 kB)
+#8 1.623 Collecting starlette==0.38.6 (from -r requirements.txt (line 5))
+#8 1.656   Downloading starlette-0.38.6-py3-none-any.whl.metadata (19 kB)
+#8 1.779 Collecting anyio==4.6.0 (from -r requirements.txt (line 6))
+#8 1.836   Downloading anyio-4.6.0-py3-none-any.whl.metadata (21 kB)
+#8 1.961 Collecting sniffio==1.3.1 (from -r requirements.txt (line 7))
+#8 1.971   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (38 kB)
+#8 2.236 Collecting idna==3.10 (from -r requirements.txt (line 8))
+#8 2.319   Downloading idna-3.10-py3-none-any.whl.metadata (3 kB)
+#8 2.578 Collecting h11==0.14.0 (from -r requirements.txt (line 9))
+#8 2.778   Downloading h11-0.14.0-py3-none-any.whl.metadata (25 kB)
+#8 2.971 Collecting click==8.1.7 (from -r requirements.txt (line 10))
+#8 3.049   Downloading click-8.1.7-py3-none-any.whl.metadata (27 kB)
+#8 3.110 Collecting typing-extensions==4.12.2 (from -r requirements.txt (line 11))
+#8 3.112   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (12 kB)
+#8 3.239 Collecting annotated-types==0.7.0 (from -r requirements.txt (line 12))
+#8 3.403   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (27 kB)
+#8 3.576 Collecting sqlalchemy==2.0.35 (from -r requirements.txt (line 13))
+#8 3.649   Downloading sqlalchemy-2.0.35-py3-none-any.whl.metadata (12 kB)
+#8 3.688 Collecting greenlet==3.1.1 (from -r requirements.txt (line 14))
+#8 3.698   Downloading greenlet-3.1.1-py3-none-any.whl.metadata (11 kB)
+#8 3.891 Collecting psycopg2-binary==2.9.9 (from -r requirements.txt (line 15))
+#8 4.072   Downloading psycopg2_binary-2.9.9-py3-none-any.whl.metadata (7 kB)
+#8 4.244 Collecting alembic==1.13.3 (from -r requirements.txt (line 16))
+#8 4.430   Downloading alembic-1.13.3-py3-none-any.whl.metadata (34 kB)
+#8 4.481 Collecting mako==1.3.5 (from -r requirements.txt (line 17))
+#8 4.551   Downloading mako-1.3.5-py3-none-any.whl.metadata (12 kB)
+#8 4.707 Collecting markupsafe==3.0.0 (from -r requirements.txt (line 18))
+#8 4.892   Downloading markupsafe-3.0.0-py3-none-any.whl.metadata (8 kB)
+#8 5.007 Collecting httpx==0.27.2 (from -r requirements.txt (line 19))
+#8 5.158   Downloading httpx-0.27.2-py3-none-any.whl.metadata (14 kB)
+#8 5.249 Collecting certifi==2024.8.30 (from -r requirements.txt (line 20))
+#8 5.416   Downloading certifi-2024.8.30-py3-none-any.whl.metadata (4 kB)
+#8 5.709 Collecting httpcore==1.0.6 (from -r requirements.txt (line 21))
+#8 5.805   Downloading httpcore-1.0.6-py3-none-any.whl.metadata (5 kB)
+#8 5.988 Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 22))
+#8 6.115   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (7 kB)
+#8 6.386 Collecting structlog==24.4.0 (from -r requirements.txt (line 23))
+#8 6.510   Downloading structlog-24.4.0-py3-none-any.whl.metadata (12 kB)
+#8 6.638 Downloading fastapi-0.115.0-py3-none-any.whl (897 kB)
+#8 6.638    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m247.0/979.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 6.719 Downloading uvicorn-0.31.0-py3-none-any.whl (886 kB)
+#8 6.719    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m220.0/960.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 6.756 Downloading pydantic-2.9.2-py3-none-any.whl (243 kB)
+#8 6.756    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m62.0/951.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 6.943 Downloading pydantic_core-2.23.4-py3-none-any.whl (180 kB)
+#8 6.943    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m412.0/945.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 6.968 Downloading starlette-0.38.6-py3-none-any.whl (272 kB)
+#8 6.968    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m762.0/924.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 6.976 Downloading anyio-4.6.0-py3-none-any.whl (595 kB)
+#8 6.976    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m882.0/996.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.111 Downloading sniffio-1.3.1-py3-none-any.whl (703 kB)
+#8 7.111    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m878.0/941.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.134 Downloading idna-3.10-py3-none-any.whl (633 kB)
+#8 7.134    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m486.0/970.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.304 Downloading h11-0.14.0-py3-none-any.whl (816 kB)
+#8 7.304    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m333.0/983.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.388 Downloading click-8.1.7-py3-none-any.whl (616 kB)
+#8 7.388    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m275.0/954.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.466 Downloading typing_extensions-4.12.2-py3-none-any.whl (396 kB)
+#8 7.466    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m477.0/964.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.554 Downloading annotated_types-0.7.0-py3-none-any.whl (43 kB)
+#8 7.554    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m23.0/979.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.751 Downloading sqlalchemy-2.0.35-py3-none-any.whl (496 kB)
+#8 7.751    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m260.0/957.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 7.904 Downloading greenlet-3.1.1-py3-none-any.whl (818 kB)
+#8 7.904    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m858.0/958.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.071 Downloading psycopg2_binary-2.9.9-py3-none-any.whl (849 kB)
+#8 8.071    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m504.0/951.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.092 Downloading alembic-1.13.3-py3-none-any.whl (151 kB)
+#8 8.092    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m387.0/955.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.165 Downloading mako-1.3.5-py3-none-any.whl (841 kB)
+#8 8.165    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m472.0/964.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.267 Downloading markupsafe-3.0.0-py3-none-any.whl (61 kB)
+#8 8.267    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m61.0/981.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.293 Downloading httpx-0.27.2-py3-none-any.whl (771 kB)
+#8 8.293    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m341.0/999.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.438 Downloading certifi-2024.8.30-py3-none-any.whl (101 kB)
+#8 8.438    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m75.0/996.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.538 Downloading httpcore-1.0.6-py3-none-any.whl (406 kB)
+#8 8.538    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m688.0/917.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.544 Downloading python_dotenv-1.0.1-py3-none-any.whl (87 kB)
+#8 8.544    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m648.0/993.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 8.682 Downloading structlog-24.4.0-py3-none-any.whl (132 kB)
+#8 8.682    [38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m218.0/916.0 kB[0m [31m12.3 MB/s[0m eta [36m0:00:00[0m
+#8 9.682 Installing collected packages: fastapi, uvicorn, pydantic, pydantic-core, starlette, anyio, sniffio, idna, h11, click, typing-extensions, annotated-types, sqlalchemy, greenlet, psycopg2-binary, alembic, mako, markupsafe, httpx, certifi, httpcore, python-dotenv, structlog
+#8 14.682 Successfully installed fastapi-0.115.0 uvicorn-0.31.0 pydantic-2.9.2 pydantic-core-2.23.4 starlette-0.38.6 anyio-4.6.0 sniffio-1.3.1 idna-3.10 h11-0.14.0 click-8.1.7 typing-extensions-4.12.2 annotated-types-0.7.0 sqlalchemy-2.0.35 greenlet-3.1.1 psycopg2-binary-2.9.9 alembic-1.13.3 mako-1.3.5 markupsafe-3.0.0 httpx-0.27.2 certifi-2024.8.30 httpcore-1.0.6 python-dotenv-1.0.1 structlog-24.4.0
+#8 14.782 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 DONE 15.7s
+
+#9 [5/6] COPY . .
+#9 DONE 0.1s
+
+#10 [6/6] RUN python -m compileall -q app
+#10 DONE 0.6s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.9s done
+#11 writing image sha256:f9572b85a8e48f687ab165c58ac5831be38cb8cb4ba2e751989a01749ddb14f7 done
+#11 naming to docker.io/library/myapp:latest done
+#11 DONE 1.9s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/k3q2yq0v8h7c6x5z4w3v2u1t0
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview

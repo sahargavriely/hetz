@@ -1,0 +1,86 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.0, pytest-8.3.3, pluggy-1.5.0 -- /Users/dev/proj/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /Users/dev/proj
+configfile: pyproject.toml
+plugins: anyio-4.6.0, cov-5.0.0, asyncio-0.24.0
+asyncio: mode=Mode.STRICT, default_loop_scope=None
+collecting ... collected 69 items
+
+tests/test_api.py::test_create_user PASSED                           [  1%]
+tests/test_api.py::test_get_user PASSED                              [  2%]
+tests/test_api.py::test_update_user PASSED                           [  4%]
+tests/test_api.py::test_delete_user PASSED                           [  5%]
+tests/test_api.py::test_list_users_pagination PASSED                 [  7%]
+tests/test_api.py::test_auth_required PASSED                         [  8%]
+tests/test_api.py::test_returns_404_for_missing PASSED               [ 10%]
+tests/test_api.py::test_error_payload_shape PASSED                   [ 11%]
+tests/test_api.py::test_rate_limit_headers PASSED                    [ 13%]
+tests/test_api.py::test_cors_preflight PASSED                        [ 14%]
+tests/test_models.py::test_user_defaults PASSED                      [ 15%]
+tests/test_models.py::test_email_validation PASSED                   [ 17%]
+tests/test_models.py::test_password_hash PASSED                      [ 18%]
+tests/test_models.py::test_soft_delete PASSED                        [ 20%]
+tests/test_models.py::test_timestamps PASSED                         [ 21%]
+tests/test_models.py::test_relationships PASSED                      [ 23%]
+tests/test_models.py::test_unique_constraint PASSED                  [ 24%]
+tests/test_models.py::test_assert_invariants PASSED                  [ 26%]
+tests/test_services.py::test_service_case_0 PASSED                   [ 27%]
+tests/test_services.py::test_service_case_1 PASSED                   [ 28%]
+tests/test_services.py::test_service_case_2 PASSED                   [ 30%]
+tests/test_services.py::test_service_case_3 PASSED                   [ 31%]
+tests/test_services.py::test_service_case_4 PASSED                   [ 33%]
+tests/test_services.py::test_service_case_5 PASSED                   [ 34%]
+tests/test_services.py::test_service_case_6 PASSED                   [ 36%]
+tests/test_services.py::test_service_case_7 PASSED                   [ 37%]
+tests/test_services.py::test_service_case_8 PASSED                   [ 39%]
+tests/test_services.py::test_service_case_9 PASSED                   [ 40%]
+tests/test_services.py::test_service_case_10 PASSED                  [ 42%]
+tests/test_services.py::test_service_case_11 PASSED                  [ 43%]
+tests/test_services.py::test_service_case_12 PASSED                  [ 44%]
+tests/test_services.py::test_service_case_13 PASSED                  [ 46%]
+tests/test_services.py::test_service_case_14 PASSED                  [ 47%]
+tests/test_services.py::test_service_case_15 PASSED                  [ 49%]
+tests/test_services.py::test_service_case_16 PASSED                  [ 50%]
+tests/test_services.py::test_service_case_17 PASSED                  [ 52%]
+tests/test_services.py::test_service_case_18 PASSED                  [ 53%]
+tests/test_services.py::test_service_case_19 PASSED                  [ 55%]
+tests/test_services.py::test_service_case_20 PASSED                  [ 56%]
+tests/test_services.py::test_service_case_21 PASSED                  [ 57%]
+tests/test_services.py::test_service_case_22 PASSED                  [ 59%]
+tests/test_services.py::test_service_case_23 PASSED                  [ 60%]
+tests/test_services.py::test_service_case_24 PASSED                  [ 62%]
+tests/test_services.py::test_service_case_25 PASSED                  [ 63%]
+tests/test_services.py::test_service_case_26 PASSED                  [ 65%]
+tests/test_services.py::test_service_case_27 PASSED                  [ 66%]
+tests/test_services.py::test_service_case_28 PASSED                  [ 68%]
+tests/test_services.py::test_service_case_29 PASSED                  [ 69%]
+tests/test_services.py::test_service_case_30 PASSED                  [ 71%]
+tests/test_services.py::test_service_case_31 PASSED                  [ 72%]
+tests/test_services.py::test_service_case_32 PASSED                  [ 73%]
+tests/test_services.py::test_service_case_33 PASSED                  [ 75%]
+tests/test_services.py::test_service_case_34 PASSED                  [ 76%]
+tests/test_services.py::test_service_case_35 PASSED                  [ 78%]
+tests/test_services.py::test_service_case_36 PASSED                  [ 79%]
+tests/test_services.py::test_service_case_37 PASSED                  [ 81%]
+tests/test_services.py::test_service_case_38 PASSED                  [ 82%]
+tests/test_services.py::test_service_case_39 PASSED                  [ 84%]
+tests/test_utils.py::test_slugify[hello] PASSED                      [ 85%]
+tests/test_utils.py::test_slugify[Hello World] PASSED                [ 86%]
+tests/test_utils.py::test_slugify[a-b] PASSED                        [ 88%]
+tests/test_utils.py::test_slugify[ümlaut] PASSED                     [ 89%]
+tests/test_utils.py::test_slugify[x_y] PASSED                        [ 91%]
+tests/test_utils.py::test_slugify[  pad  ] PASSED                    [ 92%]
+tests/test_utils.py::test_parse_duration[1s] PASSED                  [ 94%]
+tests/test_utils.py::test_parse_duration[5m] PASSED                  [ 95%]
+tests/test_utils.py::test_parse_duration[2h] PASSED                  [ 97%]
+tests/test_utils.py::test_parse_duration[1d] PASSED                  [ 98%]
+tests/test_utils.py::test_parse_duration[bad] PASSED                 [100%]
+
+=============================== warnings summary ===============================
+tests/test_models.py::test_timestamps
+  /Users/dev/proj/app/models.py:41: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    created = datetime.utcnow()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 69 passed, 1 warning in 4.21s =========================

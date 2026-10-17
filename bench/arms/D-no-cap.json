@@ -1,0 +1,6 @@
+{
+  "extends": "D",
+  "description": "Ablation: D without the autoCompactWindow cap.",
+  "ablates": "cap",
+  "remove_settings": ["autoCompactWindow"]
+}

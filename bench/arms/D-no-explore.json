@@ -1,0 +1,7 @@
+{
+  "extends": "D",
+  "description": "Ablation: D without the Explore-on-Haiku override (built-in Explore).",
+  "ablates": "explore",
+  "target_tasks": ["repo-qa", "rename", "three-tasks"],
+  "project_files": {".claude/agents/Explore.md": null}
+}

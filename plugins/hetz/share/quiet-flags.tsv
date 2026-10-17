@@ -1,0 +1,41 @@
+# hetz quiet flags: key<TAB>quieter invocation<TAB>caveat (optional). Read by hooks/squeeze.py for its footer tip.
+# key = "tool subcommand" (tried first) or "tool": the command name after wrappers (env vars, time, npx, uv run,
+# python -m). No row -> "generic". Caveat = what the quieter form hides. Human cheat sheet: docs/quiet-flags.md.
+npm	npm --loglevel=error --no-fund --no-audit
+pnpm	pnpm --loglevel=error
+yarn	yarn --silent --no-progress	classic yarn only; --silent can hide error detail, rerun without it on failure
+bun install	bun install --no-progress
+bun add	bun add --no-progress
+bun	bun --silent	--silent hides install errors; rerun without it on failure
+pip	pip -q
+pip3	pip3 -q
+uv	uv -q
+poetry	poetry -q
+cargo	cargo -q
+go test	go test ./...	omit -v; failures still print
+pytest	pytest -q --tb=short -x
+py.test	pytest -q --tb=short -x
+jest	jest --silent	--silent hides console output of tests
+vitest	vitest --reporter=dot
+mocha	mocha --reporter dot
+eslint	eslint --quiet	--quiet hides warnings
+gradle	gradle -q --console=plain	-q hides failure detail; rerun without it on failure
+gradlew	./gradlew -q --console=plain	-q hides failure detail; rerun without it on failure
+mvn	mvn -B -ntp
+mvnw	./mvnw -B -ntp
+docker build	set -o pipefail; docker build --progress=plain . 2>&1 | tail -40
+docker buildx	set -o pipefail; docker buildx build --progress=plain . 2>&1 | tail -40
+docker pull	docker pull -q
+docker push	docker push -q
+docker compose	docker compose --progress=quiet
+docker	set -o pipefail; docker build --progress=plain . 2>&1 | tail -40
+docker-compose	docker compose --progress=quiet
+make	make -s
+gmake	gmake -s
+brew	HOMEBREW_NO_AUTO_UPDATE=1 brew install -q	no auto-update can install stale versions
+apt	apt-get -qq
+apt-get	apt-get -qq
+terraform	terraform init -input=false -no-color
+bundle	bundle install --quiet
+composer	composer install -q --no-progress	-q can hide error detail; rerun without it on failure
+generic	cmd > "$TMPDIR/x.log" 2>&1; echo exit=$?; tail -40 "$TMPDIR/x.log"

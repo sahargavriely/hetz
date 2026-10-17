@@ -1,0 +1,8 @@
+{
+  "extends": "D",
+  "description": "Variant: D, but the task goes through /hetz-crew:delegate, plus one approval turn (the skill waits for plan approval).",
+  "prompt_prefix": "/hetz-crew:delegate ",
+  "extra_turns": ["Approved. Execute the plan, then report."],
+  "only_tasks": ["failing-test", "rename"],
+  "variant_of": "D"
+}

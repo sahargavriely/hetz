@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "hetz",
+  "description": "Token-saving kit for Claude Code: output squeeze, session guard, interview, handoff, slim, model-matched crew",
+  "owner": {
+    "name": "Sahar Gavriely"
+  },
+  "plugins": [
+    {
+      "name": "hetz",
+      "description": "Zero-listing-cost token savers: Bash output squeeze, session guard, subagent return contract, /setup /interview /handoff /slim",
+      "source": "./plugins/hetz",
+      "category": "productivity"
+    },
+    {
+      "name": "hetz-crew",
+      "description": "Model-matched delegation: Haiku runner, Sonnet worker, Opus judge, and /delegate",
+      "source": "./plugins/hetz-crew",
+      "category": "productivity"
+    }
+  ]
+}
